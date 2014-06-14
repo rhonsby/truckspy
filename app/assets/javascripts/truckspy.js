@@ -7,6 +7,10 @@ window.Truckspy = {
     new Truckspy.Routers.Router({
       $rootEl: $('#content')
     });
+
+    Truckspy.trucks = new Truckspy.Collections.Trucks();
+    Truckspy.trucks.fetch();
+
     Backbone.history.start();
   }
 };

@@ -24,10 +24,11 @@ body, html {
 
 #content {
   padding: 40px;
+  height: 91%;
 }
 
 .header {
-  height: 75px;
+  height: 9%;
   width: 100%;
   background: -webkit-linear-gradient(#c41200, #af0606);
   background: -o-linear-gradient(#c41200, #af0606);
@@ -45,6 +46,21 @@ body, html {
     font-weight: 200;
     span {
       color: #999;
+    }
+  }
+}
+
+.address-search-form {
+  text-align: center;
+
+  .form-group {
+    display: inline;
+    text-align: center;
+
+    input {
+      height: 50px;
+      width: 100%;
+      font-size: 1.3em;
     }
   }
 }
