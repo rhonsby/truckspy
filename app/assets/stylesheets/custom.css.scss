@@ -1,0 +1,50 @@
+body, html {
+  height: 100%;
+}
+
+.index {
+  height: 100%;
+  width: 100%;
+}
+
+.index > div {
+  float: left
+}
+
+#map-canvas {
+  height: 100%;
+  width: 40%;
+}
+
+.main {
+  margin: 0;
+  height: 100%;
+  width: 60%;
+}
+
+#content {
+  padding: 40px;
+}
+
+.header {
+  height: 75px;
+  width: 100%;
+  background: -webkit-linear-gradient(#c41200, #af0606);
+  background: -o-linear-gradient(#c41200, #af0606);
+  background: -moz-linear-gradient(#c41200, #af0606);
+  background: linear-gradient(#c41200, #af0606);
+  border-bottom: 1px solid #853330;
+  -webkit-box-shadow: 0 0 5px rgba(78,2,2,0.76);
+  box-shadow: 0 0 5px rgba(78,2,2,0.76);
+  h1 {
+    margin: 0;
+    padding-top: 12px;
+    text-align: right;
+    padding-right: 20px;
+    color: #eee;
+    font-weight: 200;
+    span {
+      color: #999;
+    }
+  }
+}

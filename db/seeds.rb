@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+ActiveRecord::Base.transaction do
+  raw_data = RestClient.get('http://data.sfgov.org/resource/mbtc-ffmn.json')
+  parsed_data = JSON.parse(raw_data)
+
+  parsed_data.each do |truck_data|
+    lat = truck_data["latitude"]
+    long = truck_data["longitude"]
+    # raw_address_data = RestClient.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=#{lat},#{long}&key=#{ENV['GOOGLE_MAPS_API_KEY']}")
+    # address = JSON.parse(raw_address_data)["results"].first["formatted_address"]
+
+    Truck.create(
+      name: truck_data["applicant"],
+      longitude: long,
+      latitude: lat
+    )
+  end
+end

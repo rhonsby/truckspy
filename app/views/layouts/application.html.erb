@@ -2,13 +2,30 @@
 <html>
 <head>
   <title>Truckspy</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div class='index clearfix'>
+    <div id="map-canvas">
+    </div>
 
+    <div class='main'>
+      <div class='header'>
+        <h1><i class="fa fa-truck"></i> truck<span class='gray'>spy</span></h1>
+      </div>
+
+      <div id='content'>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>">
+</script>
 </body>
 </html>
