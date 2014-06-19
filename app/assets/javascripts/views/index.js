@@ -48,13 +48,19 @@ Truckspy.Views.rootIndex = Backbone.View.extend({
     var marker;
     var view = this;
 
+    var goldStar = {
+      url: 'marker.png',
+    };
+
     trucks.forEach(function (truck) {
       markerOptions = new google.maps.LatLng(truck.escape('latitude'), truck.escape('longitude'));
+
 
       marker = new google.maps.Marker({
         position: markerOptions,
         map: Truckspy.map,
-        title: truck.escape('id')
+        title: truck.escape('id'),
+        icon: goldStar
       });
 
       view.markers.push(marker);

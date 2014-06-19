@@ -1,6 +1,9 @@
 body, html {
   height: 100%;
-  color: #555;
+  color: #ccc;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .index {
@@ -25,23 +28,18 @@ body, html {
 
 #content {
   padding: 40px;
-  height: 91%;
-  overflow: scroll;
+  height: calc(100% - 70px);
+  overflow-x: hidden;
+  background: #141719;
 }
 
 .header {
   height: 70px;
   width: 100%;
-  background: -webkit-linear-gradient(#c41200, #af0606);
-  background: -o-linear-gradient(#c41200, #af0606);
-  background: -moz-linear-gradient(#c41200, #af0606);
-  background: linear-gradient(#c41200, #af0606);
-  border-bottom: 1px solid #853330;
-  -webkit-box-shadow: 0 0 5px rgba(78,2,2,0.76);
-  box-shadow: 0 0 5px rgba(78,2,2,0.76);
+  background: #002a3f;
   h1 {
     margin: 0;
-    padding-top: 12px;
+    padding-top: 13px;
     text-align: right;
     padding-right: 20px;
     color: #eee;
@@ -55,6 +53,8 @@ body, html {
 .address-search-form {
   text-align: center;
   margin-top: 15px;
+  padding: 5px;
+  background-color: rgba(30, 186, 214, 0.498039);
 
   .form-group {
     display: inline;
@@ -64,6 +64,10 @@ body, html {
       height: 50px;
       width: 100%;
       font-size: 1.3em;
+      border: 0px solid #fff;
+      border-radius: 2px;
+      padding: 18px 15px 17px;
+      background: #fff;
     }
   }
 }
@@ -75,13 +79,22 @@ body, html {
 }
 
 .truck {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid rgba(234, 234, 234, 0.26);
   padding: 20px 15px;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
   &:hover {
-    background-color: #fafafa;
+    background-color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
   }
   p {
     margin-bottom: 5px;
+    font-weight: 100;
+    font-size: 1.2em;
+  }
+  p:first-child {
+    font-size: 1.5em;
+    color: #1EBAD6;
   }
   p:last-child {
     margin-top: 0;
