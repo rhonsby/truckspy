@@ -3,12 +3,10 @@ Truckspy.Views.rootIndex = Backbone.View.extend({
 
   initialize: function (options) {
     this.trucks = options.trucks;
-    this.renderMap({
-      lat: 37.7833,
-      lng: -122.4167
-    });
+    this.renderMap();
 
     this.resultsView = new Truckspy.Views.results();
+    this.listenTo(this.trucks, 'sync', this.render);
   },
 
   events: {
@@ -23,6 +21,7 @@ Truckspy.Views.rootIndex = Backbone.View.extend({
   },
 
   renderMap: function (options) {
+    options = options || { lat: 37.7833, lng: -122.4167 };
     this.markers = [];
     this.map = new Truckspy.Models.Map(options).map;
 
