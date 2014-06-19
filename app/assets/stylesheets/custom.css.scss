@@ -81,6 +81,8 @@ body, html {
 .truck {
   border-top: 1px solid rgba(234, 234, 234, 0.26);
   padding: 20px 15px;
+  -o-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   &:hover {
@@ -102,5 +104,5 @@ body, html {
 }
 
 .truck-results > .truck:last-child {
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid rgba(234, 234, 234, 0.26);
 }

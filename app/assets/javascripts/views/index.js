@@ -85,6 +85,7 @@ Truckspy.Views.rootIndex = Backbone.View.extend({
   displayResults: function (trucks) {
     var $results = $('.results');
     $results.html(this.resultsView.render(trucks).$el);
+    $('#content').scrollTop(0);
   },
 
   removeMarkers: function () {
