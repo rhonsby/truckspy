@@ -1,5 +1,6 @@
 body, html {
   height: 100%;
+  color: #555;
 }
 
 .index {
@@ -25,10 +26,11 @@ body, html {
 #content {
   padding: 40px;
   height: 91%;
+  overflow: scroll;
 }
 
 .header {
-  height: 9%;
+  height: 70px;
   width: 100%;
   background: -webkit-linear-gradient(#c41200, #af0606);
   background: -o-linear-gradient(#c41200, #af0606);
@@ -52,6 +54,7 @@ body, html {
 
 .address-search-form {
   text-align: center;
+  margin-top: 15px;
 
   .form-group {
     display: inline;
@@ -63,4 +66,28 @@ body, html {
       font-size: 1.3em;
     }
   }
+}
+
+.truck-results {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.truck {
+  border-top: 1px solid #eaeaea;
+  padding: 20px 15px;
+  &:hover {
+    background-color: #fafafa;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  p:last-child {
+    margin-top: 0;
+  }
+}
+
+.truck-results > .truck:last-child {
+  border-bottom: 1px solid #eaeaea;
 }

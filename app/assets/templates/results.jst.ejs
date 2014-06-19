@@ -1,0 +1,8 @@
+<ul class='truck-results'>
+  <% trucks.forEach(function (truck) { %>
+    <li class='truck' data-title='<%= truck.escape('id') %>'>
+      <p class='lead'><%= truck.escape('name') %></p>
+      <p><%= truck.escape('address') %></p>
+    </li>
+  <% }); %>
+</ul>

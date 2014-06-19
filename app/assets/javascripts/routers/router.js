@@ -8,7 +8,9 @@ Truckspy.Routers.Router = Backbone.Router.extend({
   },
 
   rootIndex: function () {
-    var rootIndexView = new Truckspy.Views.rootIndex();
+    var rootIndexView = new Truckspy.Views.rootIndex({
+      trucks: Truckspy.trucks
+    });
     this._swapView(rootIndexView);
   },
 

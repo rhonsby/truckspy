@@ -5,8 +5,7 @@ ActiveRecord::Base.transaction do
   parsed_data.each do |truck_data|
     lat = truck_data["latitude"]
     long = truck_data["longitude"]
-    # raw_address_data = RestClient.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=#{lat},#{long}&key=#{ENV['GOOGLE_MAPS_API_KEY']}")
-    # address = JSON.parse(raw_address_data)["results"].first["formatted_address"]
+    raw_address_data = RestClient.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=#{lat},#{long}&key=#{ENV['GOOGLE_MAPS_API_KEY']}")
 
     Truck.create(
       name: truck_data["applicant"],
