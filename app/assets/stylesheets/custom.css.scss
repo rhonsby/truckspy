@@ -89,25 +89,24 @@ body, html {
     background-color: rgba(0, 0, 0, 0.25);
     cursor: pointer;
   }
+  .truck-title {
+    color: #1EBAD6;
+    margin-bottom: -1px;
+  }
+  .truck-address {
+    font-style: italic;
+    color: rgb(130, 130, 130);
+  }
+  .truck-food-items {
+    margin-top: 10px;
+  }
   p {
     margin-bottom: 5px;
     font-weight: 100;
     font-size: 1.2em;
   }
-  p:first-child {
-    font-size: 1.5em;
-    color: #1EBAD6;
-  }
-  p:last-child {
-    margin-top: 0;
-  }
 }
 
 .truck-results > .truck:last-child {
   border-bottom: 1px solid rgba(234, 234, 234, 0.26);
-}
-
-.address {
-  font-style: italic;
-  color: rgb(130, 130, 130);
 }
